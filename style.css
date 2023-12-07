@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.icon__box {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30%;
+  transition: all 0.3s;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.text {
+  position: absolute;
+  transform: translate(0px, -8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.icon__box:hover .text {
+  transform: translate(80px, -8px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.icon__box:hover .bg {
+  rotate: 15deg;
+  transform: translateX(10px);
+}
+
+.icon__box:hover .content {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.facebook {
+  background: #1877f2;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.linkedin {
+  background: #0077b5;
+}
